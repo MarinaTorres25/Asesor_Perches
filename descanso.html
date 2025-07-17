@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marina Torres Descanso</title>
+  <link rel="stylesheet" href="descanso.css">
+  <script src="menu.js" defer></script>
+  <script src="carrusel.js" defer></script>
+</head>
+
+<body>
+  <!-- BARRA SUPERIOR -->
+  <section id="arriba">
+    <section id="arriba-izq">
+      <p>Atención <br> Personalizada</p>
+      <h3>(656) 268-71-95</h3>
+    </section>
+    <section id="arriba-der">
+      <p>Contáctanos</p>
+      <a href="https://wa.me/526562687195?text=Hola%20quiero%20más%20información"><img src="img/inicio/whatsapp-icon.png" alt="WhatsApp"></a>
+      <a href="https://www.facebook.com/profile.php?id=100063801675188"><img src="img/inicio/facebook-icon.png" alt="Facebook"></a>
+      <a href="mailto:torresmarina726@gmail.com?subject=Quiero%20más%20información&body=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios."><img src="img/inicio/mail-icon.png" alt="Mail"></a>
+    </section>
+  </section>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header id="encabezado">
+    <nav id="menu_principal" class="menu">
+      <div id="logo_contenedor">
+        <a href="#" onclick="event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });">
+          <img src="img/inicio/logo.png" alt="Logo" id="logo_imagen" /></a>
+          <span id="logo_texto">Marina Torres <br />Asesor Certificado</span>
+      </div>
+      <div id="menu_icono" onclick="toggleMenu()">
+        <div class="barra"></div>
+        <div class="barra"></div>
+        <div class="barra"></div>
+      </div>
+      <ul id="menu_lista">
+        <li class="menu_item">
+          <a href="index.html">Inicio</a>
+          <ul class="submenu">
+            <li><a href="index.html">Descuentos</a></li>
+            <li><a href="index.html">Trayectoria</a></li>
+            <li><a href="index.html">Contacto</a></li>
+          </ul>
+        </li>
+        <li class="menu_item">
+          <a href="servicios.html">Servicios</a>
+          <ul class="submenu">
+            <li><a href="servicios.html">Servicio Diamante</a></li>
+            <li><a href="servicios.html">Servicio Oro</a></li>
+            <li><a href="servicios.html">Servicio Plata</a></li>
+            <li><a href="servicios.html">Cremación Directa</a></li>
+          </ul>
+        </li>
+        <li class="menu_item">
+          <a href="#" onclick="event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });" class="inactiva">Panteones</a>
+          <ul class="submenu">
+            <li><a href="#fosas">Fosas</a></li>
+            <li><a href="#nichos">Nichos</a></li>
+            <li><a href="#mausoleos">Mausoleos</a></li>
+            <li><a href="#capilla">Capilla Familiar</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </li>
+        <li class="menu_item">
+          <a href="ecologico.html">Ecológico</a>
+          <ul class="submenu">
+            <li><a href="ecologico.html">Nichos</a></li>
+            <li><a href="ecologico.html">BioTerra</a></li>
+            <li><a href="ecologico.html">BioAqua</a></li>
+            <li><a href="ecologico.html">Adopción de Árbol</a></li>
+            <li><a href="ecologico.html">BioTerra</a></li>
+          </ul>
+        </li>
+        <li class="menu_item">
+          <a href="complementos.html">Complementos</a>
+          <ul class="submenu">
+            <li><a href="complementos.html">Lápidas</a></li>
+            <li><a href="complementos.html">Aperturas y Cierres</a></li>
+            <li><a href="complementos.html">Complemento de ataúd</a></li>
+            <li><a href="complementos.html">Embalsamamiento</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio"></section>
+  <section id="fosas">
+    <h2><b>Fosas</b></h2>
+    <div class="imgjuntas">
+      <img src="img/descanso/fosa1.png" alt="Fosa Recinto">
+      <img src="img/descanso/fosa2.png" alt="Fosa Jardines">
+      <img src="img/descanso/fosas3.jpg" alt="Fosas Recinto">
+    </div>
+
+    <p style="margin-top:20px ;">
+      <b>Este servicio contempla los siguientes elementos:</b> <br> <br>
+      • Una fosa cuádruple o doble a perpetuidad en el parque funerario <br>
+      <b>Recinto de la Oración</b> o <b>Jarines
+        Eternos</b>. <br>
+      • Apertura y cierre de la primera gaveta. <br>
+      • Plan de saldos insolutos del 50% del costo.
+    </p>
+  </section>
+
+
+  <section id="nichos">
+    <h2><b>Nichos</b></h2>
+    <h3>Nichos Economicos.</h3>
+    <div class="contenedor-servicio">
+      <div class="carousel-contenido">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="img/descanso/nichoeconomico1.jpeg" alt="Nicho Economico">
+          </div>
+
+        </div>
+      </div>
+      <div class="texto-contenido">
+        <p> <b>Este servicio contempla los siguientes elementos:</b> <br><br>
+
+          • Nicho sencillo, doble, cuádruple o familiar para 6 urnas a perpetuidad en: <br>
+          - Mausoleo La Paz de <b>Recinto de la Oración</b> <br>
+          - Nuestra Señora de Guadalupe de <b>Jardines Eternos</b>. <br>
+          • Mantenimiento a perpetuidad. <br>
+          • Apertura y cierre de nicho. <br>
+          • Plan de saldos insolutos. </p>
+      </div>
+    </div>
+
+    <h3>Nichos Premier.</h3>
+    <div class="contenedor-servicio2">
+      <div class="texto-contenido2">
+        <p> <b>Este servicio contempla los siguientes elementos:</b> <br><br>
+
+          • Nicho sencillo, doble o cuádruple a perpetuidad en interior de: <br>
+          <b>- Recinto de la Oración:</b><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;- Capillas Juan Pablo II <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;- Subterraneo <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;- Mausoleos Versalles <br>
+          <b>- Jardines Eternos:</b>. <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;- Capilla Eternidad <br>
+          • Pago de mantenimiento. <br>
+          • Apertura y cierre de nicho. <br>
+          • Plan de saldos insolutos.
+        </p>
+      </div>
+      <div class="carousel-contenido2">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="img/descanso/nichopremier1.jpeg" alt="Nichos Premier">
+            <img src="img/descanso/nichopremier2.jpeg" alt="Nichos Premier">
+          </div>
+
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+
+          <div class="carousel-indicators">
+            <span class="bar active"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h3>Nichos Papa Francisco.</h3>
+    <div class="contenedor-servicio">
+
+      <div class="carousel-contenido">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="img/descanso/nichosPapaFrancisco.png" alt="Papa Francisco">
+          </div>
+        </div>
+      </div>
+
+      <div class="texto-contenido">
+        <p> <b>Este servicio contempla los siguientes elementos:</b> <br><br>
+
+          • Nicho doble o cuádruple a perpetuidad en Nichos Papa Francisco <br> dentro de
+          <b>Recinto de la Oración</b> <br><br>
+
+          • Mantenimiento a perprtuidad. <br>
+          • Apertura y cierre de nicho. <br>
+          • Plan de saldos insolutos.
+        </p>
+      </div>
+  </section>
+
+  <section id="mausoleos">
+    <h2><b>Mausoleos</b></h2>
+    <h3>Mausoleos Recinto de la Oración.</h3>
+    <div class="contenedor-servicio2">
+      <div class="texto-contenido2">
+        <p> <b>Este servicio contempla los siguientes elementos:</b> <br><br>
+
+          • Una bóveda a perpetuidad en el Mausoleo de <br> <b>Recinto de la Oración</b> <br>
+          • Sellado de la bóveda. <br>
+          • Tapa de mármol blanco "Carrara". <br>
+          • Nombre, fechas y un texto de hasta 15 palabras en grabado. <br>
+          • Plan de saldos insolutos del 50% del costo. </p>
+      </div>
+      <div class="carousel-contenido2">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="img/descanso/mausoleoRecintoOracion.png" alt="Mausoleos">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3>Mausoleos San Salvador.</h3>
+    <div class="contenedor-servicio">
+
+      <div class="carousel-contenido">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="img/descanso/mausoleosSanSalvador.png" alt="Mausoleos">
+          </div>
+        </div>
+      </div>
+
+      <div class="texto-contenido">
+        <p> <b>Este servicio contempla los siguientes elementos:</b> <br><br>
+
+          • Una bóveda a perpetuidad en el Mausoleo de San Salvador de <br><b>Jardines Eternos</b>. <br>
+          • Sellado de la bóveda. <br>
+          • Tapa de mármol blanco "Ojinaga". <br>
+          • Nombre y fechas en grabado. <br>
+          • 2 Floreros. <br>
+          • Plan de saldos insolutos del 50% del costo. </p>
+      </div>
+  </section>
+
+
+
+  <section id="capilla">
+    <h2><b>Capilla Familiar</b></h2>
+    <h3>Capilla Privada Familiar para 24 personas</h3>
+    <p> <br>
+      <b>Este servicio contempla los siguientes elementos:</b> <br><br>
+
+      • 6 Mausoleos. <br>
+      • 6 Osarios. <br>
+      • Nicho para 12 urnas. <br>
+      • Acabados extremos con textura. <br>
+      • Acabado interno con granito. <br>
+      • Entrada privada. <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<b>Diseño personalizado en capilla.</b>
+    </p>
+    <div class="imgjuntas">
+      <img src="img/descanso/capfamiliar1.JPG" alt="Capilla Familiar">
+      <img src="img/descanso/capfamiliar2.JPG" alt="Capilla Familiar">
+      <img src="img/descanso/capfamiliar3.JPG" alt="Capilla Familiar">
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer id="contacto">
+    <section class="abajo-izq">
+      <h3>Contáctame</h3>
+      <a href="https://wa.me/526562687195?text=Hola%20quiero%20más%20información">
+        <img src="img/inicio/whatsapp-icon.png" alt="Teléfono">
+        <p>(656) 268-7195</p>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100063801675188">
+        <img src="img/inicio/facebook-icon.png" alt="Facebook">
+        <p>@funeralesafuturo</p>
+      </a>
+      <a href="mailto:torresmarina726@gmail.com?subject=Quiero%20más%20información&body=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios.">
+        <img src="img/inicio/mail-icon.png" alt="Correo">
+        <p>torresmarina726@gmail.com</p>
+      </a>
+    </section>
+
+    <section class="abajo-der">
+      <!--<a href="/politica-de-privacidad.html">Política de Privacidad</a>-->
+      <a href="terminos-de-servicio.html">Términos de Servicio</a>
+      </p>
+      <p>&copy; 2025 Marina Torres. <br> Todos los derechos reservados.</p>
+    </section>
+  </footer>
+</body>
+
+</html>

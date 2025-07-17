@@ -1,0 +1,675 @@
+/* ===== RESET GENERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+main,
+section#inicio {
+  margin-top: 100px; 
+}
+
+/* ===== BARRA SUPERIOR ===== */
+#arriba {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #f5f5f0;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  z-index: 1001;
+  transition: top 0.3s ease;
+}
+
+#arriba.oculto {
+  top: -60px;
+}
+
+#arriba-izq {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-left: 4%;
+}
+
+#arriba-izq p,
+#arriba-izq h3,
+#arriba-der p {
+  margin: 0;
+}
+
+#arriba-der {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-right: 6%;
+  transition: transform 0.2s ease;
+}
+
+#arriba-der a img {
+  width: 30px;
+  height: 30px;
+}
+
+#arriba-der a:hover {
+  opacity: 0.9;
+  transform: scale(1.12);
+}
+
+/* ===== ENCABEZADO PRINCIPAL ===== */
+#encabezado {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgb(17, 45, 111);
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  transition: top 0.3s ease;
+  justify-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+#logo_contenedor {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#logo_imagen {
+  width: 40px;
+  height: 40px;
+}
+
+#logo_texto {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#menu_icono {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.barra {
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  width: 25px;
+  transition: 0.4s;
+}
+
+#menu_lista {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu_item {
+  position: relative;
+}
+
+.menu_item a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.menu_item a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.menu_item a:hover {
+  font-size: 1.05rem;
+}
+
+.menu_item a:hover::after {
+  width: 90%;
+}
+
+.submenu {
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: absolute;
+  background-color: #0b1d45;
+  top: 100%;
+  left: 0;
+  padding: 0.5rem 0;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.menu_item:hover .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  max-height: 500px;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+
+
+
+/* === Overlay para cuando el menú está abierto === */
+#menu_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 999;
+}
+
+#menu_overlay.activo {
+  display: block;
+}
+
+/* === Icono hamburguesa animado === */
+#menu_icono.abierto .barra:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu_icono.abierto .barra:nth-child(2) {
+  opacity: 0;
+}
+
+#menu_icono.abierto .barra:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+#menu_icono.abierto .barra {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* === Submenús solo activos en la página actual === */
+.menu_item > a.inactiva + .submenu {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none;
+  max-height: 0 !important;
+  transform: none !important;
+}
+
+.menu_item > a.inactiva {
+  pointer-events: auto;
+  cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== CARRUSEL Y SERVICIOS ===== */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(17, 17, 17, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.3s;
+}
+
+.bar.active {
+  background: white;
+}
+
+
+.contenedor-servicio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background-color: white;
+  color: rgb(17, 45, 111);
+  align-items: center;
+}
+
+.contenedor-servicio2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background-color: white;
+  color: rgb(17, 45, 111);
+  align-items: center;
+}
+
+.carousel-contenido {
+  flex: 1 1 50%;
+  text-align: left;
+  padding: 20px;
+  animation: slideInLeft 1s ease-out both;
+}
+
+.carousel-contenido2 {
+  flex: 1 1 50%;
+  text-align: right;
+  padding: 20px;
+  animation: fadeIn 1s ease-out both;
+}
+
+.carousel-contenido h2 {
+  color: rgb(17, 45, 111);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.carousel-contenido2 h2 {
+  color: rgb(17, 45, 111);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  margin-right: 40px;
+  font-weight: bold;
+}
+
+
+.contenedor-servicio .texto-contenido {
+  flex: 1 1 45%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-right: 5px solid rgb(17, 45, 111);
+  border-bottom: 5px solid rgb(17, 45, 111);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.2s ease-out both;
+}
+
+.contenedor-servicio2 .texto-contenido2 {
+  flex: 1 1 45%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-left: 5px solid rgb(17, 45, 111);
+  border-bottom: 5px solid rgb(17, 45, 111);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1.2s ease-out both;
+}
+
+.contenedor-servicio .texto-contenido p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+  font-weight: 500;
+}
+
+.contenedor-servicio2 .texto-contenido2 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+  font-weight: 500;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.carousel-images img {
+  transition: transform 0.5s ease;
+}
+
+.carousel-images img:hover {
+  transform: scale(1.02);
+}
+
+.bar {
+  transition: all 0.4s ease;
+  opacity: 0.5;
+  transform: scaleX(1);
+}
+
+.bar.active {
+  opacity: 1;
+  background-color: white;
+  transform: scaleX(1.2);
+}
+
+
+.texto-contenido,
+.carousel-contenido {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.texto-contenido2,
+.carousel-contenido2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+/*ver mas*/
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.texto-oculto {
+  display: inline;
+}
+
+
+.ver-mas-btn {
+   display: none;
+  background: none;
+  border: none;
+  color: rgb(17, 45, 111);
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 0;
+}
+
+
+
+
+/* ===== FOOTER ===== */
+footer {
+  width: 100%;
+  background-color: rgb(17, 45, 111);
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.abajo-izq,
+.abajo-der {
+  width: 48%;
+}
+
+.abajo-izq h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.abajo-izq a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.abajo-izq a:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.abajo-izq img {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+}
+
+.abajo-izq p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.abajo-der a {
+  display: block;
+  margin: 8px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.abajo-der a:hover {
+  color: #a8c6ff;
+  text-decoration: underline;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 768px) {
+  #arriba-izq {
+    display: block;
+  }
+
+  #menu_icono {
+    display: flex;
+  }
+
+  #menu_lista {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0b1d45;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  #menu_lista.show {
+    display: flex;
+  }
+
+  .menu_item {
+    width: 100%;
+  }
+
+  .submenu {
+    position: static;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .submenu.visible {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .submenu li a {
+    padding-left: 2rem;
+  }
+
+
+/*ver mas*/
+.texto-oculto {
+    display: none;
+  }
+  .ver-mas-btn {
+    display: inline;
+  }
+
+  /*carrusel*/
+  .contenedor-servicio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto-contenido, .carousel-contenido {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .texto-contenido {
+    border-right: none;
+    border-bottom: 5px solid rgb(17, 45, 111);
+  }
+
+  .carousel-contenido h2 {
+    text-align: center;
+  }
+
+
+
+
+/*footer*/
+  footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .abajo-izq,
+  .abajo-der {
+    margin: 0 40px;
+    max-width: 400px;
+  }
+
+  .abajo-izq a,
+  .abajo-der a {
+    text-align: center;
+  }
+
+  .abajo-der {
+    margin-top: 5%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  #arriba {
+    font-size: small;
+  }
+
+  #logo_texto {
+    font-size: large;
+  }
+
+  #arriba-der a img {
+    width: 25px;
+    height: 25px;
+  }
+
+  #arriba-der p {
+    font-size: small;
+  }
+
+
+
+
+}

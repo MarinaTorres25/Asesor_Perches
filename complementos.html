@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marina Torres Descanso</title>
+    <link rel="stylesheet" href="complementos.css">
+    <script src="menu.js" defer></script>
+</head>
+
+<body>
+    <!-- BARRA SUPERIOR -->
+    <section id="arriba">
+        <section id="arriba-izq">
+            <p>Atención <br> Personalizada</p>
+            <h3>(656) 268-71-95</h3>
+        </section>
+        <section id="arriba-der">
+            <p>Contáctanos</p>
+            <a href="https://wa.me/526562687195?text=Hola%20quiero%20más%20información"><img src="img/inicio/whatsapp-icon.png" alt="WhatsApp"></a>
+            <a href="https://www.facebook.com/profile.php?id=100063801675188"><img src="img/inicio/facebook-icon.png" alt="Facebook"></a>
+            <a href="mailto:torresmarina726@gmail.com?subject=Quiero%20más%20información&body=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios."><img src="img/inicio/mail-icon.png" alt="Mail"></a>
+        </section>
+    </section>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header id="encabezado">
+        <nav id="menu_principal" class="menu">
+            <div id="logo_contenedor">
+                <a href="#" onclick="event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });">
+                    <img src="img/inicio/logo.png" alt="Logo" id="logo_imagen" /></a>
+                <span id="logo_texto">Marina Torres <br />Asesor Certificado</span>
+            </div>
+            <div id="menu_icono" onclick="toggleMenu()">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+            </div>
+            <ul id="menu_lista">
+                <li class="menu_item">
+                    <a href="index.html">Inicio</a>
+                    <ul class="submenu">
+                        <li><a href="index.html">Descuentos</a></li>
+                        <li><a href="index.html">Trayectoria</a></li>
+                        <li><a href="index.html">Contacto</a></li>
+                    </ul>
+                </li>
+                <li class="menu_item">
+                    <a href="servicios.html">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="servicios.html">Servicio Diamante</a></li>
+                        <li><a href="servicios.html">Servicio Oro</a></li>
+                        <li><a href="servicios.html">Servicio Plata</a></li>
+                        <li><a href="servicios.html">Cremación Directa</a></li>
+                    </ul>
+                </li>
+                <li class="menu_item">
+                    <a href="descanso.html">Panteones</a>
+                    <ul class="submenu">
+                        <li><a href="descanso.html">Fosas</a></li>
+                        <li><a href="descanso.html">Nichos</a></li>
+                        <li><a href="descanso.html">Mausoleos</a></li>
+                        <li><a href="descanso.html">Capilla Familiar</a></li>
+                    </ul>
+                </li>
+                <li class="menu_item">
+                    <a href="ecologico.html">Ecológico</a>
+                    <ul class="submenu">
+                        <li><a href="ecologico.html">Nichos</a></li>
+                        <li><a href="ecologico.html">BioTerra</a></li>
+                        <li><a href="ecologico.html">BioAqua</a></li>
+                        <li><a href="ecologico.html">Adopción de Árbol</a></li>
+                        <li><a href="ecologico.html">BioTerra</a></li>
+                    </ul>
+                </li>
+                <li class="menu_item">
+                    <a href="#"onclick="event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });" class="inactiva">Complementos</a>
+                    <ul class="submenu">
+                        <li><a href="#lapidas">Lápidas</a></li>
+                        <li><a href="#ayc">Aperturas y Cierres</a></li>
+                        <li><a href="#complemento">Complemento de ataúd</a></li>
+                        <li><a href="#embalsamamiento">Embalsamamiento</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio"></section>
+    <main>
+
+        <!-- Lápidas -->
+        <section class="servicio" id="lapidas">
+            <img src="img/complementos/lapidas.png" alt="Lápidas">
+            <div class="texto-contenido">
+                <h2>Lápidas</h2>
+                <p>
+                    Contamos con una amplia variedad de lápidas personalizadas que reflejan la memoria de sus seres
+                    queridos.
+                    Ofrecemos materiales de alta calidad, grabados duraderos y diseños únicos que pueden incluir
+                    símbolos religiosos, mensajes personalizados o imágenes grabadas. Nuestro objetivo es brindar un
+                    homenaje visual y duradero en un espacio significativo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Aperturas y Cierres -->
+        <section class="servicio" id="ayc">
+            <img src="img/complementos/apertura y cierre.png" alt="Aperturas y Cierres">
+            <div class="texto-contenido">
+                <h2>Aperturas y Cierres</h2>
+                <p>
+                    Servicio profesional para la apertura y cierre de espacios en cementerio, garantizando respeto y
+                    puntualidad.
+                    Nuestro equipo especializado se encarga de todo el proceso con cuidado y discreción, cumpliendo con
+                    las normativas de seguridad y requisitos específicos del lugar. Nos aseguramos de que cada etapa sea
+                    manejada con respeto hacia la familia y el ser querido.
+                </p>
+            </div>
+        </section>
+
+        <!-- Complemento de Ataúd -->
+        <section class="servicio" id="complemento">
+            <img src="img/complementos/complemento.png" alt="Complemento de Ataúd">
+            <div class="texto-contenido">
+                <h2>Complemento de Ataúd</h2>
+                <p>
+                    Accesorios y acabados personalizados para ataúdes que honran la personalidad y estilo de cada
+                    persona.
+                    Desde interiores acolchados hasta detalles metálicos o grabados, cada complemento puede elegirse
+                    para reflejar un homenaje más íntimo. Brindamos diversas opciones que se adaptan a presupuestos,
+                    gustos y creencias culturales o religiosas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Embalsamamiento -->
+        <section class="servicio" id="embalsamamiento">
+            <img src="img/complementos/embalsamamiento.png" alt="Embalsamamiento">
+            <div class="texto-contenido">
+                <h2>Embalsamamiento</h2>
+                <p>
+                    Procedimiento profesional que preserva la imagen digna de su ser querido para ceremonias o
+                    traslados.
+                    Nuestro equipo realiza el embalsamamiento con sumo cuidado, siguiendo prácticas sanitarias y
+                    técnicas avanzadas que garantizan una presentación respetuosa. Es ideal para velorios extendidos o por decisión familiar.
+                </p>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+    <footer id="contacto">
+        <section class="abajo-izq">
+            <h3>Contáctame</h3>
+            <a href="https://wa.me/526562687195?text=Hola%20quiero%20más%20información">
+                <img src="img/inicio/whatsapp-icon.png" alt="Teléfono">
+                <p>(656) 268-7195</p>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100063801675188">
+                <img src="img/inicio/facebook-icon.png" alt="Facebook">
+                <p>@funeralesafuturo</p>
+            </a>
+            <a href="mailto:torresmarina726@gmail.com?subject=Quiero%20más%20información&body=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios.">
+                <img src="img/inicio/mail-icon.png" alt="Correo">
+                <p>torresmarina726@gmail.com</p>
+            </a>
+        </section>
+
+        <section class="abajo-der">
+            <!--<a href="/politica-de-privacidad.html">Política de Privacidad</a>-->
+            <a href="terminos-de-servicio.html">Términos de Servicio</a>
+            </p>
+            <p>&copy; 2025 Marina Torres. <br> Todos los derechos reservados.</p>
+        </section>
+    </footer>
+</body>
+
+</html>
